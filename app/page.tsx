@@ -1,12 +1,14 @@
+"use client"
+
 import Link from "next/link";
 import { motion } from "motion/react";
 import { RoughNotation } from "react-rough-notation";
 import { Button } from "@/components/ui/button";
 import { Github, Globe, Linkedin, Mail } from "lucide-react";
-import { div } from "motion/react-client";
 import { Badge } from "@/components/ui/badge";
 import { GithubGraph } from "@/components/ui/github";
 import { Card } from "@/components/ui/card";
+import { useState } from "react";
 
 
 const skills = {
@@ -55,6 +57,9 @@ const navItems = [
 
 
 export default function Home() {
+
+  const [activeSection , setActiveSection] = useState('Home');
+
   return (
    <main>
 
@@ -91,8 +96,7 @@ export default function Home() {
 
        <div>
         <motion.div>
-          <h1>
-           
+          <h1>         
               <span>
                 Hello, I'm 
                 <RoughNotation type="highlight">
