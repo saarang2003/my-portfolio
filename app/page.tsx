@@ -2,10 +2,11 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { RoughNotation } from "react-rough-notation";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Globe, Linkedin, Mail } from "lucide-react";
 import { div } from "motion/react-client";
 import { Badge } from "@/components/ui/badge";
 import { GithubGraph } from "@/components/ui/github";
+import { Card } from "@/components/ui/card";
 
 
 const skills = {
@@ -186,10 +187,50 @@ export default function Home() {
             <motion.section>
               <h2>Projects</h2>
               <div>
-                {projects.a}
+               {
+                projects.map((project) =>(
+                  <Card
+                  key={project.title}
+
+
+
+                  >
+                    <h2>
+                      <RoughNotation type="underline" >
+                        <span>{project.title}</span>
+                      </RoughNotation>
+                    </h2>
+
+                    <p>{project.description}</p>
+                    <div>
+                      <div>
+                        {
+                          project.tech.map((tech) => (
+                            <Badge  key={tech} >
+                                {tech}
+                            </Badge>
+                          ))
+                        }
+                      </div>
+
+                      <div>
+                        <Link href={project.githubLink} >
+                        <Globe  />
+                        </Link>
+                        <Link href={project.liveLink}>
+                        <Github />
+                        </Link>
+                      </div>
+                    </div>
+                  </Card>    
+                ))
+               }
               </div>
             </motion.section>
 
+            <footer>
+  © 2025 Sarang Patil. All rights reserved.
+            </footer>
    </main>
   );
 }
