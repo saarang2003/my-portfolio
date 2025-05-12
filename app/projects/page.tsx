@@ -66,17 +66,24 @@ export default function ProjectsPage(){
 
     return (
 
-        <main>
-            <div>
-               <Link href = '/' >
-                <ArrowLeft />
+        <main className="relative min-h-screen bg-black  text-white overflow-hidden">
+            <div className="container mx-auto px-4 py-8 relative z-10 max-w-3xl">
+
+               <Link href = '/' className="inline-flex items-center text-zinc-400 hover:text-white mb-8"  >
+                <ArrowLeft  size={16} className="mr-2" />
                 Back to Home
                </Link>
 
 
 
-               <h1>
-                <RoughNotation type="highlight" >
+               <h1 className="text-3xl font-semibold mb-8" >
+                <RoughNotation  type="highlight"
+                              color="#ff4000"
+                              show={true}
+                              animationDelay={600}
+                              strokeWidth={2}
+                              padding={[8, 10, 8, 12]}
+                              >
 
                 <span>Projects</span>
                 </RoughNotation>
@@ -84,33 +91,38 @@ export default function ProjectsPage(){
 
 
 
-               <div >
+               <div className="space-y-12" >
                 {
                     projects.map((project , index) =>(
                         <div key={project.title}>
-                            <div>
-                            <h2>
-                                <RoughNotation type="underline" >
+                            <div className="mb-6">
+                            <h2 className="text-2xl font-medium mb-2 relative inline-block" >
+                                <RoughNotation   type="underline"
+                              color="#ff4000"
+                              show={true}
+                              animationDelay={600}
+                              strokeWidth={2}
+                              padding={[8, 8, 4, 6]} >
 
                                     <span>{project.title}</span>
                                 </RoughNotation>
 
                             </h2>
 
-                            <p>{project.description}</p>
+                            <p className="text-zinc-400 mb-4" >{project.description}</p>
 
 
-                            <div>
+                            <div className="flex flex-wrap gap-2 mb-4" >
                                 {
                                     project.technologies.map((tech) =>(
-                                     <span key={tech} >
+                                     <span key={tech}  className="px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-full text-sm text-zinc-400"  >
                                         {tech}
                                      </span>
                                     ))}
                             </div>
 
 
-                            <Link href={project.github} >
+                            <Link href={project.github} className="text-zinc-400 hover:text-white underline underline-offset-4"  >
                             View ON Github
                             </Link>
                             </div>
