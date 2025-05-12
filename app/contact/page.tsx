@@ -44,7 +44,7 @@ export default function ContactPage() {
 
                         <p className="text-zinc-400 mb-6">
                         Feel free to reach out through the platforms below or send an
-              email. I'm always open to discussing new projects, creative ideas,
+              email. I&apos;m always open to discussing new projects, creative ideas,
               or opportunities.
                         </p>
 

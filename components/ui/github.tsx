@@ -10,8 +10,8 @@ type GithubGraphProps = {
 };
 
 async function fetchContributionData(username: string): Promise<Activity[]> {
-  let response = await fetch(`https://github.vineet.pro/api/${username}`);
-  let responseBody = await response.json();
+  const response = await fetch(`https://github.vineet.pro/api/${username}`);
+  const responseBody = await response.json();
 
   if (!response.ok) {
     throw Error("Erroring fetching contribution data");
@@ -32,7 +32,8 @@ export const GithubGraph = ({
       const contributions = await fetchContributionData(username);
       setContribution(contributions);
     } catch (error) {
-      throw Error("Error fetching contributions data");
+      throw Error("Error fetching contributions data" );
+      console.log("error " , error);
     } finally {
       setLoading(false);
     }
