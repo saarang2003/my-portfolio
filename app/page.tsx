@@ -61,7 +61,7 @@ export default function Home() {
   const [activeSection , setActiveSection] = useState('Home');
 
   return (
-   <main className="min-h-screen border-2 border-red-500 bg-black text-zinc-50 relative overflow-hidden">
+   <main className="min-h-screen b bg-black text-zinc-50 relative overflow-hidden">
 
     {/* {Navigation} */}
     <nav className="left-0 right-0 border-zinc-800/50 z-50">
@@ -98,72 +98,116 @@ export default function Home() {
 
           {/* Floating Blobs */}
 
-       <div>
+       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
 
-        <div>
-
-        </div>
+        <div 
+        
+        className="absolute top-5 right-0 w-[300px] h-[300px] rounded-fu;; bg-[#ff4000] blur-[120px]"
+        style={{animation : "float-blob-2 20s infinite ease-in-out"}}
+        />
+        <div
+         className="absolute bottom-0 left-10 w-[300px] h-[300px] rounded-full bg-[#ff4000] blur-[120px]"
+        style={{animation : "float-blob-2 15s infinite ease-in-out"}}
+        />
        </div>
 
 
-       <div>
-        <motion.div>
-          <h1 className="font-extrabold text-2xl text-red-800" >         
-              <span>
-                Hello, I'm 
-                <RoughNotation type="highlight">
+       <div className="max-w-4xl mx-auto px-4 py-28 -mt-10">
+        <motion.div
+        initial = {{opacity : 0 ,y  : 20}}
+        animate = {{opacity : 1 , y : 0}}
+        transition={{duration : 0.5}}
+        >
+          <h1 className="text-5xl font-bold mb-4 text-white inline-block" >         
+              <span className="flex gap-2">
+                Hello,I'm  
+                <RoughNotation type="highlight"
+                color="#ff4000"
+                show ={true}
+                animationDelay={800}
+                strokeWidth={2}
+                >
                 <span>
-                  Sarang Patil
+                    Sarang Patil
                 </span>
                 </RoughNotation>
               </span>
           </h1>
 
 
-          <p>
+          <p className="text-xl text-zinc-200 mb-8">
               A passionate front-end developer dedicated to building high-quality,
             scalable web applications.
           </p>
         </motion.div>
 
-        <motion.div>
+        <motion.div
+        initial = {{ opacity: 0 , y : 20}}
+        animate ={{opacity : 1 , y : 0}}
+        transition={{duration : 0.5 , delay : 0.3}}
+        className="flex gap-4 mb-12"
+        >
           <Link href="mailto:sarang18work@gmail.com">
-          <Button>
+          <Button
+          variant={"outline"}
+          className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
+          >
 
-            <Mail />
+            <Mail className="mr-2 h-4 w-4" />
             Email
           </Button>        
           </Link>
 
-          <Link href="github.com/saarang2003">
-          <Button>
-            <Github />
+          <Link href="github.com/saarang2003"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          <Button
+          variant={"outline"}
+          className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
+          >
+            <Github className="mr-2 h-4 w-4" />
             Github
           </Button>         
           </Link>
 
-          <Link href="https://www.linkedin.com/in/sarang-patil-707a58334/">
-            <Button>
+          <Link href="https://www.linkedin.com/in/sarang-patil-707a58334/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            <Button
+             variant={"outline"}
+          className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
+            >
 
-              <Linkedin />
+              <Linkedin  className="mr-2 w-4 h-4"/>
               LinkedIn
             </Button>
           </Link>
 
         </motion.div>
 
-        <motion.section>
+        <motion.section
+        initial = {{ opacity : 0 , y : 20}}
+        animate = {{opacity : 1 , y : 0}}
+        transition={{duration : 0.5 , delay : 0.4}}
+        className="mb-16"        
+        >
 
-          <h2>Skills</h2>
-          <div>
+          <h2 className="text-2xl font-semibold mb-6 text-white">Skills</h2>
+          <div className="grid gap-8">
             {
               Object.entries(skills).map(([category , items]) =>(
                 <div key={category}>
-                  <h3>{category}</h3>
-                  <div>
+                  <h3 className="text-lg font-medium mb-3 text-zinc-200">{category}</h3>
+                  <div className="flex flex-wrap gap-2">
                     {
                       items.map((skill) =>(
-                       <Badge  key = {skill} >
+                       <Badge 
+                        key = {skill} 
+                        variant={"secondary"}
+                        className="bg-[#ff4000] hover:bg-black text-white border-zinc-700 hover:text-zinc-200"
+                        >
                         {skill}
                        </Badge>
                       ))
@@ -175,12 +219,23 @@ export default function Home() {
           </div>
 
         </motion.section>
-       </div>
        
        {/* motion github */}
-            <motion.section>
-              <h2>
-                <RoughNotation type="circle">
+            <motion.section 
+            initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="mt-16"
+            >
+              <h2 className="text-2xl font-semibold mb-6 text-white relative inline-block" >
+                <RoughNotation 
+                type="circle"
+              color="#ff4000"
+              show={true}
+              animationDelay={600}
+              strokeWidth={2}
+              padding={[8, 8, 4, 6]}
+              >
                 <span>Github Contribution</span>
                 </RoughNotation>
               </h2>
@@ -200,41 +255,57 @@ export default function Home() {
               </a>
             </motion.section>
 
-            <motion.section>
-              <h2>Projects</h2>
-              <div>
+            <motion.section 
+            initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <h2 className="text-2xl font-semibold mb-6 text-white" >Projects</h2>
+              <div className="grid gap-6" >
                {
                 projects.map((project) =>(
                   <Card
                   key={project.title}
-
+className="p-6 bg-zinc-900/50 border-zinc-800 backdrop-blur-sm hover:border-zinc-700 transition-colors"
 
 
                   >
-                    <h2>
-                      <RoughNotation type="underline" >
+                    <h2 className="text-2xl font-semibold mb-6 text-white relative inline-block" >
+                      <RoughNotation  type="underline"
+                    color="#ff4000"
+                    show={true}
+                    animationDelay={600}
+                    strokeWidth={2}
+                    padding={[8, 8, 4, 6]}
+                    >
                         <span>{project.title}</span>
                       </RoughNotation>
                     </h2>
 
-                    <p>{project.description}</p>
-                    <div>
-                      <div>
+                    <p className="text-zinc-300 mb-4" >{project.description}</p>
+                    <div className="flex flex-row justify-between" >
+                      <div className="flex flex-wrap gap-2" >
                         {
                           project.tech.map((tech) => (
-                            <Badge  key={tech} >
+                            <Badge 
+                              key={tech} 
+                              variant={"secondary"}
+                              className="bg-[#ff4000] hover:bg-black text-white hover:border-zinc-700  hover:text-zinc-200"
+                              >
                                 {tech}
                             </Badge>
                           ))
                         }
                       </div>
 
-                      <div>
+                      <div className="flex flex-row gap-2 text-zinc-300" >
                         <Link href={project.githubLink} >
-                        <Globe  />
+                        <Globe  size={20}
+                        className="hover:scale-125 transition-all"  />
                         </Link>
                         <Link href={project.liveLink}>
-                        <Github />
+                        <Github  size={20}
+                        className="hover:scale-125 transition-all" />
                         </Link>
                       </div>
                     </div>
@@ -244,9 +315,10 @@ export default function Home() {
               </div>
             </motion.section>
 
-            <footer>
+            <footer  className="mt-20 text-center text-zinc-400" >
   © 2025 Sarang Patil. All rights reserved.
             </footer>
+            </div>
    </main>
   );
 }

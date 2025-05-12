@@ -75,14 +75,14 @@
   }
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border ;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
 
 
 @keyframes float-blob-1 {
