@@ -21,7 +21,8 @@ export default function ContactPage() {
 
 
                 <h1 className="text-3xl font-semibold mb-8">
-                    <RoughNotation type="highlight" 
+                    <RoughNotation 
+                    type="highlight" 
                     color="#ff4000"
                     show = {true}
                     animationDelay={600}
@@ -107,6 +108,7 @@ export default function ContactPage() {
                                 name="email"
                                 placeholder="Enter your email"
                                 required
+                                 className="bg-zinc-900/50 border-zinc-800 focus-visible:ring-zinc-700"
                                 />
                             </div>
 
@@ -116,6 +118,7 @@ export default function ContactPage() {
                                 name="message"
                                 placeholder="Enter your message"
                                 required
+                                 className="bg-zinc-900/50 border-zinc-800 focus-visible:ring-zinc-700"
                                 />
                             </div>
 
@@ -123,7 +126,7 @@ export default function ContactPage() {
 
                     <input type="hidden" name="_captcha" value="false" />
 
-                    <Button>
+                    <Button className="w-full bg-zinc-800 hover:bg-zinc-700 text-white" >
                         Send Message
                     </Button>
                         </form>
