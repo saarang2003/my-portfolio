@@ -186,7 +186,7 @@ export default function Home() {
           </Link>
 
           <Link
-            href="github.com/saarang2003"
+            href="https://github.com/saarang2003"
             target="_blank"
             rel="noopener noreferrer"
           >
