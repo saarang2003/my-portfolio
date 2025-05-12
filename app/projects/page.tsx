@@ -78,7 +78,7 @@ export default function ProjectsPage(){
 
                <h1 className="text-3xl font-semibold mb-8" >
                 <RoughNotation  type="highlight"
-                              color="#ff4000"
+                              color="#059212"
                               show={true}
                               animationDelay={600}
                               strokeWidth={2}
@@ -98,7 +98,7 @@ export default function ProjectsPage(){
                             <div className="mb-6">
                             <h2 className="text-2xl font-medium mb-2 relative inline-block" >
                                 <RoughNotation   type="underline"
-                              color="#ff4000"
+                              color="#059212"
                               show={true}
                               animationDelay={600}
                               strokeWidth={2}

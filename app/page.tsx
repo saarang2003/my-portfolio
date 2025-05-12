@@ -102,11 +102,11 @@ export default function Home() {
 
         <div 
         
-        className="absolute top-5 right-0 w-[300px] h-[300px] rounded-fu;; bg-[#ff4000] blur-[120px]"
+        className="absolute top-5 right-0 w-[300px] h-[300px] rounded-fu;; bg-[#059212] blur-[120px]"
         style={{animation : "float-blob-2 20s infinite ease-in-out"}}
         />
         <div
-         className="absolute bottom-0 left-10 w-[300px] h-[300px] rounded-full bg-[#ff4000] blur-[120px]"
+         className="absolute bottom-0 left-10 w-[300px] h-[300px] rounded-full bg-[#059212] blur-[120px]"
         style={{animation : "float-blob-2 15s infinite ease-in-out"}}
         />
        </div>
@@ -122,7 +122,7 @@ export default function Home() {
               <span className="flex gap-2">
                 Hello,I'm  
                 <RoughNotation type="highlight"
-                color="#ff4000"
+                color="#059212"
                 show ={true}
                 animationDelay={800}
                 strokeWidth={2}
@@ -206,7 +206,7 @@ export default function Home() {
                        <Badge 
                         key = {skill} 
                         variant={"secondary"}
-                        className="bg-[#ff4000] hover:bg-black text-white border-zinc-700 hover:text-zinc-200"
+                        className="bg-[#059212] hover:bg-black text-white border-zinc-700 hover:text-zinc-200"
                         >
                         {skill}
                        </Badge>
@@ -230,7 +230,7 @@ export default function Home() {
               <h2 className="text-2xl font-semibold mb-6 text-white relative inline-block" >
                 <RoughNotation 
                 type="circle"
-              color="#ff4000"
+              color="#059212"
               show={true}
               animationDelay={600}
               strokeWidth={2}
@@ -243,13 +243,7 @@ export default function Home() {
               <GithubGraph
               username="saarang2003"
               blockMargin={2}
-              colorPallete={[
-                 "#2b1a0b",
-                "#7a3e1d",
-                "#b85c2e",
-                "#e67342",
-                "#ff9248",
-              ] 
+              colorPallete={["#e0e0e0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
               }
               />         
               </a>
@@ -272,7 +266,7 @@ className="p-6 bg-zinc-900/50 border-zinc-800 backdrop-blur-sm hover:border-zinc
                   >
                     <h2 className="text-2xl font-semibold mb-6 text-white relative inline-block" >
                       <RoughNotation  type="underline"
-                    color="#ff4000"
+                    color="#059212"
                     show={true}
                     animationDelay={600}
                     strokeWidth={2}
@@ -290,7 +284,7 @@ className="p-6 bg-zinc-900/50 border-zinc-800 backdrop-blur-sm hover:border-zinc
                             <Badge 
                               key={tech} 
                               variant={"secondary"}
-                              className="bg-[#ff4000] hover:bg-black text-white hover:border-zinc-700  hover:text-zinc-200"
+                              className="bg-[#059212] hover:bg-black text-white hover:border-zinc-700  hover:text-zinc-200"
                               >
                                 {tech}
                             </Badge>

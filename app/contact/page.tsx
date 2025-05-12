@@ -23,7 +23,7 @@ export default function ContactPage() {
                 <h1 className="text-3xl font-semibold mb-8">
                     <RoughNotation 
                     type="highlight" 
-                    color="#ff4000"
+                    color="#059212"
                     show = {true}
                     animationDelay={600}
                     strokeWidth={2}
