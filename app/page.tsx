@@ -61,18 +61,30 @@ export default function Home() {
   const [activeSection , setActiveSection] = useState('Home');
 
   return (
-   <main>
+   <main className="min-h-screen border-2 border-red-500 bg-black text-zinc-50 relative overflow-hidden">
 
     {/* {Navigation} */}
-    <nav>
-      <div>
-        <div>
+    <nav className="left-0 right-0 border-zinc-800/50 z-50">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-center h-16 gap-8">
           {navItems.map((item) =>(
             <Link key={item.label} href={item.link} >
 
-              <button>
-
-                <span>
+              <button
+              onClick={() => setActiveSection(item.link)}
+              className={`flex items-center gap-2 px-3 py-2 transition-colors ${
+                activeSection === item.label 
+                ? "text-white"
+                : "hover:text-white"
+              }`}
+              >
+                <span 
+                   className={`text-sm ${
+                      activeSection === item.label
+                        ? "border-b border-orange-400"
+                        : ""
+                    }`}
+                >
                   {item.label}
                 </span>
 
@@ -96,7 +108,7 @@ export default function Home() {
 
        <div>
         <motion.div>
-          <h1>         
+          <h1 className="font-extrabold text-2xl text-red-800" >         
               <span>
                 Hello, I'm 
                 <RoughNotation type="highlight">

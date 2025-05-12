@@ -30,7 +30,7 @@ export const GithubGraph = ({
   const fetchData = useCallback(async () => {
     try {
       const contributions = await fetchContributionData(username);
-      setContribution(contribution);
+      setContribution(contributions);
     } catch (error) {
       throw Error("Error fetching contributions data");
     } finally {
