@@ -10,16 +10,24 @@ import { RoughNotation } from "react-rough-notation";
 export default function ContactPage() {
 
     return(
-        <main>
-            <div>
-                <Link  href="/">
-                 <ArrowLeft  />
+        <main className="relative min-h-screen bg-black text-white overflow-hidden">
+            <div className="container mx-auto px-4 py-8 relative z-10 max-w-3xl">
+                <Link  href="/"
+                className="inline-flex items-center text-zinc-400 hover:text-white mb-8"
+                >
+                 <ArrowLeft size={16} className="mr-2" />
                  Back to Home 
                 </Link>
 
 
-                <h1>
-                    <RoughNotation type="highlight" >
+                <h1 className="text-3xl font-semibold mb-8">
+                    <RoughNotation type="highlight" 
+                    color="#ff4000"
+                    show = {true}
+                    animationDelay={600}
+                    strokeWidth={2}
+                    padding={[8,10,8,12]}
+                    >
                         <span>
                         Contact Me 
                         </span>
@@ -27,13 +35,13 @@ export default function ContactPage() {
                 </h1>
 
 
-                <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h2>
+                        <h2 className="text-xl font-medium mb-4 ">
                             Get in Touch
                         </h2>
 
-                        <p>
+                        <p className="text-zinc-400 mb-6">
                         Feel free to reach out through the platforms below or send an
               email. I'm always open to discussing new projects, creative ideas,
               or opportunities.
@@ -41,20 +49,31 @@ export default function ContactPage() {
 
 
 
-                        <div>
-                            <a href="mailto:sarang18work@gmail.com">
+                        <div className="space-y-4">
+                            <a href="mailto:sarang18work@gmail.com"
+                            className="flex items-center text-zinc-400 hover:text-white transitions-colors"
+                            >
 
-                                <Mail />
+                                <Mail size={18} className="mr-3" />
                                 sarang18work@gmail.com
                             </a>
 
-                            <a href="https://github.com/saarang2003">
-                            <Github />
+                            <a href="https://github.com/saarang2003" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-zinc-400 hover:text-white transition-colors"
+                            
+                            >
+                            <Github size={18} className="mr-3" />
                             Sarang2003
                             </a>
 
-                            <a href="https://www.linkedin.com/in/sarang-patil-707a58334/">
-                            <Linkedin />
+                            <a href="https://www.linkedin.com/in/sarang-patil-707a58334/" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-zinc-400 hover:text-white transition-colors"
+                            >
+                            <Linkedin size={18} className="mr-3"/>
                             Linkedin
                             </a>
                         </div>
@@ -62,10 +81,14 @@ export default function ContactPage() {
 
 
                     <div>
-                        <h2>
+                        <h2  className="text-xl font-medium mb-4">
                             Send a Message
                         </h2>
-                        <form action="">
+                        <form 
+                        action="https://formsubmit.co/sarang18work@gmail.com"
+                        method="POST"
+                        className="space-y-4"
+                        >
 
                             <div>
                                 <Input 
@@ -73,6 +96,7 @@ export default function ContactPage() {
                                 name="name"
                                 placeholder="Enter your name"
                                 required
+                                className="bg-zinc-900/50 border-zinc-800 focus-visible:ring-zinc-700"
                                 />
                             </div>
 

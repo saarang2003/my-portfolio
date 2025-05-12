@@ -1,10 +1,10 @@
-"use client"
-import './globals.css'
+
+import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono , Space_Mono } from "next/font/google";
 import "./globals.css";
 import {Analytics} from '@vercel/analytics/react';
-import { useEffect } from "react";
+
 
 
 const mono = Space_Mono({
@@ -22,9 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-   useEffect(() => {
-    // Analytics will only run on the client
-  }, []);
+
 
 
   return (
