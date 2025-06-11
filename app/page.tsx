@@ -33,9 +33,9 @@ const skills = {
 
 const projects = [
   {
-    title: "Hive Mind",
+    title: "Coiny",
     description:
-      "Your personal knowledge hub to store, organize, and retrieve ideas effortlessly. Easily categorize notes, ideas, and files for quick access.",
+      "Coiny is a secure, real-time digital wallet app that enables seamless and secure payments with chat functionality , QR code-based transactions, and user rewards.",
     tech: [
       "React",
       "TypeScript",
@@ -45,8 +45,8 @@ const projects = [
       "Express.js",
       "Mongoose",
     ],
-    githubLink: "https://hivee-mind.vercel.app",
-    liveLink: "https://github.com/faizanr27/Hive-Mind-FE",
+    githubLink: "https://github.com/saarang2003/Coiny",
+    liveLink: "https://coiny-frontend.onrender.com/",
   },
   {
     title: "Dev Blog",
