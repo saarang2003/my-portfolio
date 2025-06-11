@@ -3,63 +3,84 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { RoughNotation } from "react-rough-notation";
 
+
+
 const projects = [
   {
-    title: "Hive Mind",
+    title: "Coiny",
     description:
-      "Your personal knowledge hub to store, organize, and retrieve ideas effortlessly. Easily categorize notes, ideas, and files for quick access.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB", "Express.js", "Mongoose"],
-    github: "https://github.com/faizanr27/hive-Mind-fe",
+      "Coiny is a secure, real-time digital wallet app that enables seamless and secure payments with chat functionality , QR code-based transactions, and user rewards.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Shadcn",
+      "MongoDB",
+      "Express.js",
+      "Mongoose",
+      "Recoil"
+    ],
+    github: "https://coiny-frontend.onrender.com/",
   },
   {
-    title: "Web Scraper",
-    description: "This is a web scraper built using Puppeteer that can extract data from YouTube videos, websites, and tweets. It automates browser interactions to fetch relevant details efficiently.",
-    technologies: ["Node js", "Express", "Puppeteer"],
-    github: "https://github.com/faizanr27/Web-scrapper",
+    title: "ClickCart",
+    description: "ClickArt is a full-featured eCommerce web application built using the MERN stack. It allows users to browse products by categories and brands, make orders, and pay securely through PayPal.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Mongoose",
+      "Shadcn",
+      "Cloudinary",
+      "PayPal js sdk",
+      "Redux Toolkit"
+    ],
+    github: "https://clickcart-1-7ywd.onrender.com/",
   },
   {
-    title: "Dev Blog",
-    description: "FullStack Blog App with minimalistic UI.",
-    technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express.js", "Mongoose"],
-    github: "https://github.com/faizanr27/Dev-Blog",
-  },
-  {
-    title: "Shortsy",
+    title: "ForestIQ",
     description:
-      "A full-stack URL shortener with JWT authentication and bcrypt for password hashing. Uses MongoDB as the database and features a clean interface with Shadcn UI.",
-    technologies: ["React.js", "Tailwind CSS", "Shadcn/ui", "Node.js", "MongoDB", "Express.js", "Mongoose"],
-    github: "https://github.com/faizanr27/shortsy/",
+      "A full-stack Forest Management Software for green cover analysis , tree enumeration , Optimal Path finding.",
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "Shadcn/ui",
+      "Node.js",
+      "Flask",
+      "OpenCv",
+      "YOLO",
+      "RobofLow",
+      "MongoDB",
+      "Express.js",
+      "Mongoose",
+    ],
+    github: "https://forestiq-frontend.onrender.com/",
   },
-
   {
-    title: "TubeSage",
-    description: "Tube Sage makes it easy to paste blog or YouTube links and get the key information in seconds using AI.",
-    technologies: ["Work in progress","React", "Tailwind CSS", "Framer Motion", "Gemini", "Nodejs", "Express js"],
-    github: "https://github.com/faizanr27/TubeSage",
-  },
-  {
-    title: "Chat App using websockets",
+    title: "PDF Chat",
     description:
-      "A simple chat app built using WEBSOCKETS",
-    technologies: ["React.js", "Tailwind CSS", "websockets", 'Nodejs', 'Express'],
-    github: "https://github.com/faizanr27/Ws-chat-app",
+      "An AI-powered web app that lets users upload PDF files and chat to ask questions about their content.",
+    technologies: ["Node.js","Nextjs", "Express", "Bullmq" , "qdrant" , "openai"],
+    github: "https://github.com/faizanr27/Web2MD",
   },
-  // {
-  //   title: "Blogr Landing Page",
-  //   description:
-  //     "A responsive landing page built using React with custom CSS for styling. The page is fully responsive and optimized for different screen sizes.",
-  //   technologies: ["React", "CSS", "JavaScript"],
-  //   github: "#",
-  // },
-  // {
-  //   title: "Campus Connect",
-  //   description:
-  //     "A web-based application to help students manage shared resources, plan group activities, and communicate when working on academic projects.",
-  //   technologies: ["React", "Firebase"],
-  //   github: "#",
-  // },
-]
-
+   {
+    title: "Switch-it",
+    description:
+      "A simple web app that allows users to switch between different themes with a smooth, user-friendly interface.",
+    technologies: ["Nextjs","tailwindcss", "css-variables"],
+    github: "https://switch-it.vercel.app/",
+  },
+  {
+    title: "Plan-it",
+    description:
+      "A collaborative whiteboard app that lets users draw, write, and brainstorm ideas in real time—just like Eraser.io.",
+    technologies: ["Nextjs","tailwindcss", "Clerk" ,"excalidraw-api","typescript"],
+    github: "https://github.com/saarang2003/plan-it",
+  },
+];
 
 
 export default function ProjectsPage(){
