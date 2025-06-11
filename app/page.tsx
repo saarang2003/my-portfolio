@@ -96,22 +96,22 @@ const projects = [
     liveLink: "https://web2-md.vercel.app/",
     githubLink: "https://github.com/faizanr27/Web2MD",
   },
-   {
-    title: "Switch-it",
-    description:
-      "A simple web app that allows users to switch between different themes with a smooth, user-friendly interface.",
-    tech: ["Nextjs","tailwindcss", "css-variables"],
-    liveLink: "https://github.com/saarang2003/Switch-it",
-    githubLink: "https://switch-it.vercel.app/",
-  },
-  {
-    title: "Plan-it",
-    description:
-      "A collaborative whiteboard app that lets users draw, write, and brainstorm ideas in real time—just like Eraser.io.",
-    tech: ["Nextjs","tailwindcss", "Clerk" ,"excalidraw-api","typescript"],
-    liveLink: "https://github.com/saarang2003/plan-it",
-    githubLink: "https://github.com/saarang2003/plan-it",
-  },
+  //  {
+  //   title: "Switch-it",
+  //   description:
+  //     "A simple web app that allows users to switch between different themes with a smooth, user-friendly interface.",
+  //   tech: ["Nextjs","tailwindcss", "css-variables"],
+  //   liveLink: "https://github.com/saarang2003/Switch-it",
+  //   githubLink: "https://switch-it.vercel.app/",
+  // },
+  // {
+  //   title: "Plan-it",
+  //   description:
+  //     "A collaborative whiteboard app that lets users draw, write, and brainstorm ideas in real time—just like Eraser.io.",
+  //   tech: ["Nextjs","tailwindcss", "Clerk" ,"excalidraw-api","typescript"],
+  //   liveLink: "https://github.com/saarang2003/plan-it",
+  //   githubLink: "https://github.com/saarang2003/plan-it",
+  // },
 ];
 
 const navItems = [
