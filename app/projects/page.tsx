@@ -64,7 +64,7 @@ const projects = [
     description:
       "An AI-powered web app that lets users upload PDF files and chat to ask questions about their content.",
     technologies: ["Node.js","Nextjs", "Express", "Bullmq" , "qdrant" , "openai"],
-    github: "https://github.com/faizanr27/Web2MD",
+    github: "https://github.com/saarang2003/PDF-Chat",
   },
    {
     title: "Switch-it",
