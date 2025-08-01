@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import Link from "next/link";
@@ -7,8 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Github, Globe, Linkedin, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { GithubGraph } from "@/components/ui/github";
+
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
+import Image from "next/image";
+import GitHubCalendar from "react-github-calendar";
 
 const skills = {
   Languages: ["Typescript", "JavaScript", "HTML", "CSS", "SQL"],
@@ -96,22 +100,6 @@ const projects = [
     liveLink: "https://web2-md.vercel.app/",
     githubLink: "https://github.com/faizanr27/Web2MD",
   },
-  //  {
-  //   title: "Switch-it",
-  //   description:
-  //     "A simple web app that allows users to switch between different themes with a smooth, user-friendly interface.",
-  //   tech: ["Nextjs","tailwindcss", "css-variables"],
-  //   liveLink: "https://github.com/saarang2003/Switch-it",
-  //   githubLink: "https://switch-it.vercel.app/",
-  // },
-  // {
-  //   title: "Plan-it",
-  //   description:
-  //     "A collaborative whiteboard app that lets users draw, write, and brainstorm ideas in real time—just like Eraser.io.",
-  //   tech: ["Nextjs","tailwindcss", "Clerk" ,"excalidraw-api","typescript"],
-  //   liveLink: "https://github.com/saarang2003/plan-it",
-  //   githubLink: "https://github.com/saarang2003/plan-it",
-  // },
 ];
 
 const navItems = [
@@ -125,9 +113,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen b bg-black text-zinc-50 relative overflow-hidden">
-      {/* {Navigation} */}
+      {/* Navigation */}
       <nav className="left-0 right-0 border-zinc-800/50 z-50">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center h-16 gap-8">
             {navItems.map((item) => (
               <Link key={item.label} href={item.link}>
@@ -156,7 +144,6 @@ export default function Home() {
       </nav>
 
       {/* Floating Blobs */}
-
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div
           className="absolute top-5 right-0 w-[300px] h-[300px] rounded-fu;; bg-[#059212] blur-[120px]"
@@ -168,77 +155,112 @@ export default function Home() {
         />
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-28 -mt-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="text-5xl font-bold mb-4 text-white inline-block">
-            <span className="flex gap-2">
-              Hello, I&apos;m
-              <RoughNotation
-                type="highlight"
-                color="#059212"
-                show={true}
-                animationDelay={800}
-                strokeWidth={2}
+      <div className="max-w-6xl mx-auto px-4 py-28 -mt-10">
+        {/* Hero Section with Photo */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center mb-12">
+          {/* Left Content - Main Text */}
+          <div className="lg:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-5xl font-bold mb-4 text-white inline-block">
+                <span className="flex gap-2">
+                  Hello, I&apos;m
+                  <RoughNotation
+                    type="highlight"
+                    color="#059212"
+                    show={true}
+                    animationDelay={800}
+                    strokeWidth={2}
+                  >
+                    <span>Sarang Patil</span>
+                  </RoughNotation>
+                </span>
+              </h1>
+
+              <p className="text-xl text-zinc-200 mb-8">
+                A passionate front-end developer dedicated to building high-quality,
+                scalable web applications.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex gap-4"
+            >
+              <Link href="mailto:sarang18work@gmail.com">
+                <Button
+                  variant={"outline"}
+                  className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
+                >
+                  <Mail className="mr-2 h-4 w-4" />
+                  Email
+                </Button>
+              </Link>
+
+              <Link
+                href="https://github.com/saarang2003"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span>Sarang Patil</span>
-              </RoughNotation>
-            </span>
-          </h1>
+                <Button
+                  variant={"outline"}
+                  className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
+                >
+                  <Github className="mr-2 h-4 w-4" />
+                  Github
+                </Button>
+              </Link>
 
-          <p className="text-xl text-zinc-200 mb-8">
-            A passionate front-end developer dedicated to building high-quality,
-            scalable web applications.
-          </p>
-        </motion.div>
+              <Link
+                href="https://www.linkedin.com/in/sarang-patil-707a58334/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={"outline"}
+                  className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
+                >
+                  <Linkedin className="mr-2 w-4 h-4" />
+                  LinkedIn
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex gap-4 mb-12"
-        >
-          <Link href="mailto:sarang18work@gmail.com">
-            <Button
-              variant={"outline"}
-              className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
-            >
-              <Mail className="mr-2 h-4 w-4" />
-              Email
-            </Button>
-          </Link>
-
-          <Link
-            href="https://github.com/saarang2003"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Right Content - Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="lg:col-span-1 flex justify-center lg:justify-end"
           >
-            <Button
-              variant={"outline"}
-              className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              Github
-            </Button>
-          </Link>
+            <div className="relative">
+              {/* Background glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#059212]/20 to-transparent rounded-full blur-2xl"></div>
+              
+              {/* Photo container */}
+              <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-zinc-700 hover:border-[#059212] transition-colors duration-300 bg-zinc-800">
+                {/* Placeholder for your photo */}
+                <Image
+                  src="/profile.png" // Replace with your actual photo path
+                  alt="Sarang Patil"
+                  className="w-full h-full object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                {/* Fallback if no image is provided */}
+                <div className="absolute inset-0 flex items-center justify-center text-zinc-400 text-lg font-medium">
 
-          <Link
-            href="https://www.linkedin.com/in/sarang-patil-707a58334/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant={"outline"}
-              className="border-zinc-700 hover:border-zinc-500 hover:bg-black/80 hover:text-white/50 bg-black rounded-lg"
-            >
-              <Linkedin className="mr-2 w-4 h-4" />
-              LinkedIn
-            </Button>
-          </Link>
-        </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -289,17 +311,7 @@ export default function Home() {
             </RoughNotation>
           </h2>
           <a href="https://github.com/saarang2003">
-            <GithubGraph
-              username="saarang2003"
-              blockMargin={2}
-              colorPallete={[
-                "#e0e0e0",
-                "#9be9a8",
-                "#40c463",
-                "#30a14e",
-                "#216e39",
-              ]}
-            />
+            <GitHubCalendar username="saarang2003" />
           </a>
         </motion.section>
 
